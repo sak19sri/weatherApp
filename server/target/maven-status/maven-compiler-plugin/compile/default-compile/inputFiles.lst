@@ -1,0 +1,8 @@
+D:\microservicedemo\weatherapp\src\main\java\com\ps\weatherapp\entity\WeatherStatus.java
+D:\microservicedemo\weatherapp\src\main\java\com\ps\weatherapp\WeatherApp.java
+D:\microservicedemo\weatherapp\src\main\java\com\ps\weatherapp\models\CityDetails.java
+D:\microservicedemo\weatherapp\src\main\java\com\ps\weatherapp\service\WeatherReportServiceImpl.java
+D:\microservicedemo\weatherapp\src\main\java\com\ps\weatherapp\service\WeatherReportService.java
+D:\microservicedemo\weatherapp\src\main\java\com\ps\weatherapp\controller\WeatherController.java
+D:\microservicedemo\weatherapp\src\main\java\com\ps\weatherapp\persistance\WeatherStatusRepository.java
+D:\microservicedemo\weatherapp\src\main\java\com\ps\weatherapp\constants\WeatherAppConstants.java

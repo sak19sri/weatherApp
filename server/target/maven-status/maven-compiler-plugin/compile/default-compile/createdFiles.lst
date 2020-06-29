@@ -1,0 +1,8 @@
+com\ps\weatherapp\persistance\WeatherStatusRepository.class
+com\ps\weatherapp\service\WeatherReportService.class
+com\ps\weatherapp\WeatherApp.class
+com\ps\weatherapp\entity\WeatherStatus.class
+com\ps\weatherapp\models\CityDetails.class
+com\ps\weatherapp\controller\WeatherController.class
+com\ps\weatherapp\constants\WeatherAppConstants.class
+com\ps\weatherapp\service\WeatherReportServiceImpl.class
