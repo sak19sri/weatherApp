@@ -1,0 +1,65 @@
+<mat-card class="example-card" [formGroup]="selectionForm">
+    <mat-card-content>
+        <div class="row">
+            <mat-form-field class="col-4">
+                <mat-label>City</mat-label>
+                <mat-select formControlName="city">
+                    <mat-option *ngFor="let city of cities" [value]="city">{{city.name}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <mat-form-field class="col-4">
+                <mat-label>Forcast type</mat-label>
+                <mat-select formControlName="forcast">
+                    <mat-option *ngFor="let type of forcasts" [value]="type">{{type.name}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <div class="col-4">
+                <button mat-raised-button color="accent" (click)="submit()">Submit</button>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>
+
+<mat-card>
+    <mat-card-content>
+        <mat-tab-group mat-align-tabs="center">
+            <mat-tab label="Current Weather">
+                <agm-map class="map-height" [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+                    <agm-marker class="mapMarker" [latitude]="formData.city.latitude"
+                        [longitude]="formData.city.longitude" (markerClick)="markerClicked($event)">
+                        <agm-info-window>
+                            <p>City: {{formData.city.name}}</p>
+                            <p>Temperature: {{currentTemp !== 0 ? currentTemp + ' '+ 'celsius': 'Not available' }}
+                            </p>
+                        </agm-info-window>
+                    </agm-marker>
+                </agm-map>
+            </mat-tab>
+            <mat-tab label="Analytics">
+                <div class="row mt-3">
+                    <div class="col-2">
+                        <button mat-raised-button color="accent" (click)="getTableData()">Refresh</button>
+                    </div>
+                </div>
+                <table class="table table-bordered table-hover mt-3">
+                    <thead>
+                        <tr>
+                            <th>City name</th>
+                            <th>Current </th>
+                            <th>History</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let data of tableData">
+                            <td>{{data.cityName}}</td>
+                            <td>{{data.currentHits}}</td>
+                            <td>{{data.historyHits}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </mat-tab>
+        </mat-tab-group>
+    </mat-card-content>
+</mat-card>
