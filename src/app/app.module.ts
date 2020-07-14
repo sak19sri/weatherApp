@@ -32,7 +32,7 @@ import { WeatherService } from '../app/service/weather.service';
     MatTabsModule,
     HttpClientModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyDUbE-aJNSnXQJ_YsmX3KcJjntU3MMgkjA'
+      apiKey: '<YOUR_GOOGLE_MAPS_API_KEY>'
     }),
   ],
 
